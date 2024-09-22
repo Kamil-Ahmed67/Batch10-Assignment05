@@ -22,8 +22,8 @@
 </head>
 
 <body class="lexend">
-    <header class="mx-auto">
-        <div class="navbar bg-[#F9F7F3] p-4 mb-10">
+    <header class="mx-auto sticky top-0 z-50">
+        <div class="navbar bg-[#F9F7F3] p-4 mb-16 p-y-2 ">
             <div class="navbar-start">
                 <button class="btn bg-[#B4F461]">Blog</button>
             </div>
@@ -35,7 +35,7 @@
             <div class="navbar-end">
                 <div class="flex items-center">
                     <img src="./assets/coin.png" alt=" " class="w-6 h-6 mr-2">
-                    <p class="text-sm lg:text-xl  font-semibold"><span>5500</span> BDT</p>
+                    <p class="text-sm lg:text-xl  font-semibold"><span id="total-balance">5500</span> BDT</p>
                 </div>
 
             </div>
@@ -65,7 +65,7 @@
                             <p class="text-lg font-semibold"><span>0</span> BDT</p>
                         </div>
 
-                        <!--Content-->
+                        <!--Heading and Paragraph-->
                         <h2 class="text-2xl lg:text-2xl font-bold mb-4">Donate for Flood at Noakhali, Bangladesh</h2>
                         <p class="text-sm lg:text-base text-gray-700 mb-6">
                             The recent floods in Noakhali have caused significant damage to homes and infrastructure.
@@ -76,9 +76,9 @@
 
                         <!-- Donation Button -->
                         <div class="flex flex-col gap-4">
-                            <input type="text" placeholder="Write Donation Amount"
+                            <input id="c1-input-field" type="text" placeholder="Write Donation Amount"
                                 class="border border-gray-300 p-3 rounded-md w-full">
-                            <button class="bg-lime-400 text-black p-3 rounded-md w-full font-semibold">Donate
+                            <button id="c1-button" class="bg-lime-400 text-black p-3 rounded-md w-full font-semibold">Donate
                                 Now</button>
                         </div>
                     </div>
@@ -100,7 +100,7 @@
                             <p class="text-lg font-semibold"><span>600</span> BDT</p>
                         </div>
 
-                        <!--Content-->
+                        <!--Heading and Paragraph-->
                         <h2 class="text-2xl lg:text-2xl font-bold mb-4">Donate for Flood Relief in Feni,Bangladesh</h2>
                         <p class="text-sm lg:text-base text-gray-700 mb-6">
                             The recent floods in Feni have devastated local communities, leading to severe disruption
@@ -135,7 +135,7 @@
                             <p class="text-lg font-semibold"><span>2400</span> BDT</p>
                         </div>
 
-                        <!--Content-->
+                        <!--Heading and Paragraph-->
                         <h2 class="text-2xl lg:text-2xl font-bold mb-4">Donate for Flood at Noakhali, Bangladesh</h2>
                         <p class="text-sm lg:text-base text-gray-700 mb-6">
                             The recent Quota movement has resulted in numerous injuries and significant hardship for
@@ -157,6 +157,8 @@
         </div>
         <!-- Donation Card Ends -->
     </main>
+    <script src="./js/function.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
