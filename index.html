@@ -43,7 +43,7 @@
     </header>
     <main class="mx-auto">
         <!-- Donation and History Button -->
-        <div class="flex justify-center items-center space-x-4 mb-8">
+        <div class="flex justify-center items-center space-x-4 mb-8 ">
             <button class="btn bg-[#B4F461]">Donation</button>
             <button class="btn bg-white bg-[#111111B2]">History</button>
         </div>
@@ -62,11 +62,12 @@
                         <!-- Donation Amount -->
                         <div class="flex items-center mb-4">
                             <img src="./assets/coin.png" alt=" " class="w-6 h-6 mr-2">
-                            <p class="text-lg font-semibold"><span>0</span> BDT</p>
+                            <p class="text-lg font-semibold"><span id="c1-total-donation">0</span> BDT</p>
                         </div>
 
                         <!--Heading and Paragraph-->
-                        <h2 class="text-2xl lg:text-2xl font-bold mb-4">Donate for Flood at Noakhali, Bangladesh</h2>
+                        <h2 class="text-2xl lg:text-2xl font-bold mb-4">Donate<span id="card-1-title"> for Flood at
+                                Noakhali, Bangladesh</span> </h2>
                         <p class="text-sm lg:text-base text-gray-700 mb-6">
                             The recent floods in Noakhali have caused significant damage to homes and infrastructure.
                             Your donation will help provide essential supplies and support to those affected by this
@@ -78,7 +79,11 @@
                         <div class="flex flex-col gap-4">
                             <input id="c1-input-field" type="text" placeholder="Write Donation Amount"
                                 class="border border-gray-300 p-3 rounded-md w-full">
-                            <button id="c1-button" class="bg-lime-400 text-black p-3 rounded-md w-full font-semibold">Donate
+                            <p id="income-error" class="text-red-500 text-xs mt-1">
+                                ⚠️ Invalid donation amount!
+                            </p>
+                            <button id="c1-button"
+                                class="bg-lime-400 text-black p-3 rounded-md w-full font-semibold">Donate
                                 Now</button>
                         </div>
                     </div>
@@ -97,28 +102,32 @@
                         <!-- Donation Amount -->
                         <div class="flex items-center mb-4">
                             <img src="./assets/coin.png" alt=" " class="w-6 h-6 mr-2">
-                            <p class="text-lg font-semibold"><span>600</span> BDT</p>
+                            <p class="text-lg font-semibold"><span id="c2-total-donation">600</span> BDT</p>
                         </div>
 
-                        <!--Heading and Paragraph-->
-                        <h2 class="text-2xl lg:text-2xl font-bold mb-4">Donate for Flood Relief in Feni,Bangladesh</h2>
+                        <!-- Heading and Paragraph -->
+                        <h2 class="text-2xl lg:text-2xl font-bold mb-4">Donate <span span id="card-2-title">for Flood
+                                Relief in Feni, Bangladesh</span></h2>
                         <p class="text-sm lg:text-base text-gray-700 mb-6">
                             The recent floods in Feni have devastated local communities, leading to severe disruption
                             and loss. Your generous donation will help provide immediate aid, including food, clean
-                            water, and medical supplies, to those affected by this calamity.The recent Quota movement
-                            has resulted in numerous injuries. 
+                            water, and medical supplies, to those affected by this calamity.
                         </p>
 
                         <!-- Donation Button -->
                         <div class="flex flex-col gap-4">
-                            <input type="text" placeholder="Write Donation Amount"
+                            <input id="c2-input-field" type="text" placeholder="Write Donation Amount"
                                 class="border border-gray-300 p-3 rounded-md w-full">
-                            <button class="bg-lime-400 text-black p-3 rounded-md w-full font-semibold">Donate
-                                Now</button>
+                            <p id="income-error-c2" class="text-red-500 text-xs mt-1">
+                                ⚠️ Invalid donation amount!
+                            </p>
+                            <button id="c2-button"
+                                class="bg-lime-400 text-black p-3 rounded-md w-full font-semibold">Donate Now</button>
                         </div>
                     </div>
                 </div>
             </div>
+
             <!-- Card-3 -->
             <div class="max-w-5xl mx-auto p-6 bg-white shadow-md rounded-lg">
                 <div class="flex flex-col lg:flex-row items-center lg:items-start">
@@ -132,11 +141,12 @@
                         <!-- Donation Amount -->
                         <div class="flex items-center mb-4">
                             <img src="./assets/coin.png" alt=" " class="w-6 h-6 mr-2">
-                            <p class="text-lg font-semibold"><span>2400</span> BDT</p>
+                            <p class="text-lg font-semibold"><span id="c3-total-donation">2400</span> BDT</p>
                         </div>
 
                         <!--Heading and Paragraph-->
-                        <h2 class="text-2xl lg:text-2xl font-bold mb-4">Donate for Flood at Noakhali, Bangladesh</h2>
+                        <h2 class="text-2xl lg:text-2xl font-bold mb-4"><span span id="card-3-title">Aid for Injured in
+                                the Quota Movement</span> </h2>
                         <p class="text-sm lg:text-base text-gray-700 mb-6">
                             The recent Quota movement has resulted in numerous injuries and significant hardship for
                             many individuals. Your support is crucial in providing medical assistance, rehabilitation,
@@ -146,9 +156,10 @@
 
                         <!-- Donation Button -->
                         <div class="flex flex-col gap-4">
-                            <input type="text" placeholder="Write Donation Amount"
+                            <input type="text" id="c3-input-field" placeholder="Write Donation Amount"
                                 class="border border-gray-300 p-3 rounded-md w-full">
-                            <button class="bg-lime-400 text-black p-3 rounded-md w-full font-semibold">Donate
+                            <button id="c3-button"
+                                class="bg-lime-400 text-black p-3 rounded-md w-full font-semibold">Donate
                                 Now</button>
                         </div>
                     </div>
@@ -156,7 +167,20 @@
             </div>
         </div>
         <!-- Donation Card Ends -->
+        <!-- History Section Starts -->
+        <div class="border-b-2 my-4 border-dashed"></div>
+        <div>
+            <h3 id="default-text" class="text-3xl font-semibold capitalize text-center mb-8">Transaction History</h3>
+            <ul id="list-of-donations" class="space-y-5">
+            </ul>
+        </div>
+        <div class="border-b-2 my-4 border-dashed"></div>
+        <!-- History Section Ends -->
+
     </main>
+    <footer class=" bg-[#F9F7F3] p-8">
+
+    </footer>
     <script src="./js/function.js"></script>
     <script src="./js/index.js"></script>
 </body>
