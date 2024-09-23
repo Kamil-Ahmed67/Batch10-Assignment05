@@ -25,7 +25,7 @@
     <header class="mx-auto sticky top-0 z-50">
         <div class="navbar bg-[#F9F7F3] p-4 mb-16 p-y-2 ">
             <div class="navbar-start">
-                <button class="btn bg-[#B4F461]">Blog</button>
+                <button class="btn bg-lime-400">Blog</button>
             </div>
             <div class="navbar-center">
                 <a class="btn btn-ghost text-l lg:text-xl  font-semibold lg:font-bold"><img src="./assets/logo.png"
@@ -43,12 +43,12 @@
     </header>
     <main class="mx-auto">
         <!-- Donation and History Button -->
-        <div class="flex justify-center items-center space-x-4 mb-8 ">
-            <button class="btn bg-[#B4F461]">Donation</button>
-            <button class="btn bg-white bg-[#111111B2]">History</button>
+        <div class="flex justify-center items-center space-x-2 mb-8 ">
+            <button id="donation-btn" class="btn bg-lime-400 transition-colors duration-200 ease-in-out">Donation</button>
+            <button id="history-btn" class="btn bg-white transition-colors duration-200 ease-in-out">History</button>
         </div>
         <!-- Donation Card Starts -->
-        <div class="space-y-16">
+        <div id="card-container" class="space-y-16">
             <!-- Card-1 -->
             <div class="max-w-5xl mx-auto p-6 bg-white shadow-md rounded-lg">
                 <div class="flex flex-col lg:flex-row items-center lg:items-start">
@@ -62,7 +62,8 @@
                         <!-- Donation Amount -->
                         <div class="flex items-center mb-4">
                             <img src="./assets/coin.png" alt=" " class="w-6 h-6 mr-2">
-                            <p class="text-lg font-semibold"><span id="c1-total-donation">0</span> BDT</p>
+                            <p class="text-lg font-semibold bg-[#1111110D] p-1 rounded "><span
+                                    id="c1-total-donation">0</span> BDT</p>
                         </div>
 
                         <!--Heading and Paragraph-->
@@ -79,12 +80,31 @@
                         <div class="flex flex-col gap-4">
                             <input id="c1-input-field" type="text" placeholder="Write Donation Amount"
                                 class="border border-gray-300 p-3 rounded-md w-full">
-                            <p id="income-error" class="text-red-500 text-xs mt-1">
+                            <!-- ERRORS -->
+                            <p id="empty-error-c1" class="text-red-500 text-xs mt-1 hidden">
+                                ⚠️ Please enter a valid donation amount!
+                            </p>
+                            <p id="nan-error-c1" class="text-red-500 text-xs mt-1 hidden">
                                 ⚠️ Invalid donation amount!
+                            </p>
+                            <p id="balance-error-c1" class="text-red-500 text-xs mt-1 hidden">
+                                ⚠️ Donation amount cannot exceed the available balance.
                             </p>
                             <button id="c1-button"
                                 class="bg-lime-400 text-black p-3 rounded-md w-full font-semibold">Donate
                                 Now</button>
+                                <dialog id="my_modal_1" class="modal">
+                                    <div class="modal-box flex flex-col items-center">
+                                        <h3 class="text-3xl font-bold text-center">Congrats!</h3>
+                                        <img src="./assets/coin.png" alt="" class="py-4">
+                                        <p class="py-4 text-center">You have donated for Humankind</p>
+                                        <p class="py-4 text-xl font-bold text-center">Successfully</p>
+                                        <div class="modal-action">
+                                            <button id="continue-btn" class="btn">Close Confirmation</button>
+                                        </div>
+                                    </div>
+                                </dialog>
+                                
                         </div>
                     </div>
                 </div>
@@ -100,9 +120,10 @@
                     <!-- Content Section -->
                     <div class="w-full lg:w-1/2 lg:pl-8 mt-6 lg:mt-0">
                         <!-- Donation Amount -->
-                        <div class="flex items-center mb-4">
+                        <div class="flex items-center mb-4 box-border ">
                             <img src="./assets/coin.png" alt=" " class="w-6 h-6 mr-2">
-                            <p class="text-lg font-semibold"><span id="c2-total-donation">600</span> BDT</p>
+                            <p class="text-lg font-semibold bg-[#1111110D] p-1 rounded "><span
+                                    id="c2-total-donation">600</span> BDT</p>
                         </div>
 
                         <!-- Heading and Paragraph -->
@@ -118,8 +139,15 @@
                         <div class="flex flex-col gap-4">
                             <input id="c2-input-field" type="text" placeholder="Write Donation Amount"
                                 class="border border-gray-300 p-3 rounded-md w-full">
-                            <p id="income-error-c2" class="text-red-500 text-xs mt-1">
+                            <!-- ERRORS -->
+                            <p id="empty-error-c2" class="text-red-500 text-xs mt-1 hidden">
+                                ⚠️ Please enter a valid donation amount!
+                            </p>
+                            <p id="nan-error-c2" class="text-red-500 text-xs mt-1 hidden">
                                 ⚠️ Invalid donation amount!
+                            </p>
+                            <p id="balance-error-c2" class="text-red-500 text-xs mt-1 hidden">
+                                ⚠️ Donation amount cannot exceed the available balance.
                             </p>
                             <button id="c2-button"
                                 class="bg-lime-400 text-black p-3 rounded-md w-full font-semibold">Donate Now</button>
@@ -129,7 +157,7 @@
             </div>
 
             <!-- Card-3 -->
-            <div class="max-w-5xl mx-auto p-6 bg-white shadow-md rounded-lg">
+            <div class="max-w-5xl mx-auto p-6 bg-white shadow-md rounded-lg ">
                 <div class="flex flex-col lg:flex-row items-center lg:items-start">
                     <!-- Image Section -->
                     <div class="w-full lg:w-1/2">
@@ -141,7 +169,8 @@
                         <!-- Donation Amount -->
                         <div class="flex items-center mb-4">
                             <img src="./assets/coin.png" alt=" " class="w-6 h-6 mr-2">
-                            <p class="text-lg font-semibold"><span id="c3-total-donation">2400</span> BDT</p>
+                            <p class="text-lg font-semibold bg-[#1111110D] p-1 rounded "><span
+                                    id="c3-total-donation">2400</span> BDT</p>
                         </div>
 
                         <!--Heading and Paragraph-->
@@ -158,6 +187,16 @@
                         <div class="flex flex-col gap-4">
                             <input type="text" id="c3-input-field" placeholder="Write Donation Amount"
                                 class="border border-gray-300 p-3 rounded-md w-full">
+                            <!-- ERRORS -->
+                            <p id="empty-error-c3" class="text-red-500 text-xs mt-1 hidden">
+                                ⚠️ Please enter a valid donation amount!
+                            </p>
+                            <p id="nan-error-c3" class="text-red-500 text-xs mt-1 hidden">
+                                ⚠️ Invalid donation amount!
+                            </p>
+                            <p id="balance-error-c3" class="text-red-500 text-xs mt-1 hidden">
+                                ⚠️ Donation amount cannot exceed the available balance.
+                            </p>
                             <button id="c3-button"
                                 class="bg-lime-400 text-black p-3 rounded-md w-full font-semibold">Donate
                                 Now</button>
@@ -168,18 +207,22 @@
         </div>
         <!-- Donation Card Ends -->
         <!-- History Section Starts -->
-        <div class="border-b-2 my-4 border-dashed"></div>
-        <div>
+
+        <div id="transaction-history" class="hidden max-w-5xl mx-auto p-6 bg-white shadow-md rounded-lg">
+            <div class="border-b-2 my-4 border-dashed"></div>
             <h3 id="default-text" class="text-3xl font-semibold capitalize text-center mb-8">Transaction History</h3>
             <ul id="list-of-donations" class="space-y-5">
             </ul>
+            <div class="border-b-2 my-4 border-dashed"></div>
         </div>
-        <div class="border-b-2 my-4 border-dashed"></div>
+
         <!-- History Section Ends -->
 
     </main>
-    <footer class=" bg-[#F9F7F3] p-8">
-
+    <footer class="footer footer-center bg-[#F9F7F3] text-base-content p-4 mt-16">
+        <aside>
+            <p>Copyright © 2024 - All right reserved by DOM Quest Build and Manipulate</p>
+        </aside>
     </footer>
     <script src="./js/function.js"></script>
     <script src="./js/index.js"></script>
