@@ -190,3 +190,13 @@ donationButtonElement.addEventListener('click', function () {
     historyButtonElement.classList.remove('bg-lime-400');
     donationButtonElement.classList.add('bg-lime-400');
 })
+// For Blog button redirection
+document.addEventListener('DOMContentLoaded', function () {
+    const blogButton = document.getElementById('blog-btn');
+    blogButton.addEventListener('click', function (event) {
+        event.preventDefault();
+        window.location.href = "/blog.html";
+    });
+
+})
+

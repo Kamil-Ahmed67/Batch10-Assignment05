@@ -18,15 +18,14 @@
             font-optical-sizing: auto;
         }
     </style>
-
 </head>
 
 <body class="lex-font">
     <header class="mx-auto  sticky top-0 z-50 mb-24">
                 <nav>
-            <div class="navbar p-4 py-8 bg-gray-100 transition-all duration-300"> <!-- Navbar with transition -->
+            <div class="navbar p-4 py-8 bg-gray-100 transition-all duration-300">
                 <div class="navbar-start">
-                    <button class="btn bg-lime-400">Blog</button>
+                    <button id="blog-btn" class="btn bg-lime-400">Blog</button>
                 </div>
                 <div class="navbar-center">
                     <a class="btn btn-ghost text-l lg:text-xl font-semibold lg:font-bold">
@@ -221,8 +220,8 @@
         <!-- History Section Starts -->
 
         <div id="transaction-history" class="hidden max-w-5xl mx-auto p-6 bg-white shadow-md rounded-lg">
-            <div class="border-b-2 my-4 border-dashed"></div>
             <h3 id="default-text" class="text-3xl font-semibold capitalize text-center mb-8">Transaction History</h3>
+            <div class="border-b-2 my-4 border-dashed"></div>
             <ul id="list-of-donations" class="space-y-5">
             </ul>
             <div class="border-b-2 my-4 border-dashed"></div>
@@ -236,9 +235,9 @@
             <p>Copyright © 2024 - All right reserved by DOM Quest Build and Manipulate</p>
         </aside>
     </footer>
-    <script src="./js/window.js"></script>
     <script src="./js/function.js"></script>
     <script src="./js/index.js"></script>
+    <script src="./js/window.js"></script>
 </body>
 
 </html>
