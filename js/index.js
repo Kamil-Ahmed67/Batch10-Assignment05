@@ -59,6 +59,7 @@ cardOneDonationBtn.addEventListener('click', function () {
 
     const modalInputOne = document.getElementById('my_modal_1');
     modalInputOne.showModal();
+    document.getElementById('c1-input-field').value = "";
 });
 document.getElementById('continue-btn').addEventListener('click', function () {
     const modal = document.getElementById('my_modal_1');
@@ -112,6 +113,7 @@ cardTwoDonationBtn.addEventListener('click', function () {
         addDonationsIntoHistory();
         const modalInputTwo = getElements('my_modal_1');
         modalInputTwo.showModal();
+        document.getElementById('c2-input-field').value = "";
     }
 
 
@@ -164,6 +166,7 @@ cardThreeDonationBtn.addEventListener('click', function () {
         addDonationsIntoHistory();
         const modalInputThree = getElements('my_modal_1');
         modalInputThree.showModal();
+        document.getElementById('c3-input-field').value = "";
     }
 
 });
