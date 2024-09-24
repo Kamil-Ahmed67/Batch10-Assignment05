@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (homeButton) {
         homeButton.addEventListener('click', function (event) {
             event.preventDefault();
-            window.location.href = "/index.html";
+            window.location.href = "./index.html";
         });
     }
 });

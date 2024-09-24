@@ -47,14 +47,14 @@ cardOneDonationBtn.addEventListener('click', function () {
         const newTotalDonation = addDonations(currentTotalDonation, donationOne);
         totalDonationFirstElement.innerText = newTotalDonation.toFixed(2);
 
-        // Add donation to history
+        // Adding donation to history
         donationsList.push({
             amount: donationOne,
             title: cardOneTitleElement.innerText,
             date: new Date().toLocaleString()
         });
     }
-    // adding all the donations in the history list dynamically
+    // adding all the donations in the history list dynamically using function
     addDonationsIntoHistory();
 
     const modalInputOne = document.getElementById('my_modal_1');
@@ -93,23 +93,16 @@ cardTwoDonationBtn.addEventListener('click', function () {
         return false;
     }
     else {
-        // Update remaining balance
         const remainingBalance = calculateRemainingBalance(totalBalanceValue, donationTwo);
         totalBalanceElement.innerText = remainingBalance.toFixed(2);
-
-        // Update total donation
         const currentTotalDonation = parseFloat(totalDonationSecondElement.innerText);
         const newTotalDonation = addDonations(currentTotalDonation, donationTwo);
         totalDonationSecondElement.innerText = newTotalDonation.toFixed(2);
-
-        // Add donation to history (fix the object structure)
         donationsList.push({
             amount: donationTwo,
             title: cardTwoTitleElement.innerText,
             date: new Date().toLocaleString()
         });
-
-        // Update donation history
         addDonationsIntoHistory();
         const modalInputTwo = getElements('my_modal_1');
         modalInputTwo.showModal();
@@ -119,7 +112,7 @@ cardTwoDonationBtn.addEventListener('click', function () {
 
 });
 // ****************CARD-3 DONATION FUNCTIONALITIES *************************
-//card-2 errors
+//card-3 errors
 const emptyError3 = getElements('empty-error-c3');
 const nanError3 = getElements('nan-error-c3');
 const balanceError3 = getElements('balance-error-c3');
@@ -147,12 +140,8 @@ cardThreeDonationBtn.addEventListener('click', function () {
         return false;
     }
     else {
-
-        // Update remaining balance
         const remainingBalance = calculateRemainingBalance(totalBalanceValue, donationThree);
         totalBalanceElement.innerText = remainingBalance.toFixed(2);
-
-        // Update total donation
         const currentTotalDonation = parseFloat(totalDonationThirdElement.innerText);
         const newTotalDonation = addDonations(currentTotalDonation, donationThree);
         totalDonationThirdElement.innerText = newTotalDonation.toFixed(2);
@@ -161,8 +150,6 @@ cardThreeDonationBtn.addEventListener('click', function () {
             title: cardThreeTitleElement.innerText, 
             date: new Date().toLocaleString()
         });
-
-        // Update donation history
         addDonationsIntoHistory();
         const modalInputThree = getElements('my_modal_1');
         modalInputThree.showModal();
@@ -195,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const blogButton = document.getElementById('blog-btn');
     blogButton.addEventListener('click', function (event) {
         event.preventDefault();
-        window.location.href = "/blog.html";
+        window.location.href = "./blog.html";
     });
 
 })

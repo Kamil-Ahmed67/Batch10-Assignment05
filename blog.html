@@ -24,7 +24,7 @@
 <body class="lex-font">
     <header class="mx-auto  sticky top-0 z-50 mb-24">
         <nav>
-            <div class="navbar p-4 py-8 bg-gray-100 transition-all duration-300"> 
+            <div class="navbar p-4 py-8 bg-gray-100 transition-all duration-300">
                 <div class="navbar-start">
                     <button id="home-btn" class="btn bg-lime-400">Home</button>
                 </div>
@@ -47,35 +47,47 @@
     </header>
     <main class="mx-auto">
         <div class="p-8 space-y-4">
-            <h3>Important FAQ</h3>
+            <h3 class="text-4xl lg:text-5xl font-bold">Important FAQ</h3>
         </div>
         <div class="p-8 space-y-4">
-            <div class="collapse collapse-arrow bg-base-200">
+            <div class="collapse collapse-arrow bg-base-200 border border-gray-300 shadow-lg">
                 <input type="radio" name="my-accordion-2" checked="checked" />
-                <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                <div class="collapse-title text-base  lg:text-xl font-medium">What is the Document Object Model (DOM)?
+                </div>
                 <div class="collapse-content">
-                    <p>hello</p>
+                    <p>The Document Object Model (DOM) is a programming interface that represents and manipulates
+                        HTML/XML documents as a structured tree.</p>
                 </div>
             </div>
-            <div class="collapse collapse-arrow bg-base-200">
+            <div class="collapse collapse-arrow bg-base-200 border border-gray-300 shadow-lg">
                 <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                <div class="collapse-title text-base  lg:text-xl font-medium">How do you select an element from the DOM?
+                </div>
                 <div class="collapse-content">
-                    <p>hello</p>
+                    <p>1.document.getElementById('id') – Selects an element by its ID. <br>
+                        2.document.querySelector('selector') – Selects the first matching element by CSS selector. <br>
+                        3.document.querySelectorAll('selector') – Selects all elements matching the CSS selector.</p>
                 </div>
             </div>
-            <div class="collapse collapse-arrow bg-base-200">
+            <div class="collapse collapse-arrow bg-base-200 border border-gray-300 shadow-lg">
                 <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                <div class="collapse-title text-base lg:text-xl font-medium">What is event delegation in the context of
+                    the DOM, and why is it useful?</div>
                 <div class="collapse-content">
-                    <p>hello</p>
+                    <p>Event delegation is a technique in the DOM where you attach a single event listener to a parent
+                        element to manage events on multiple child elements. Instead of adding individual event
+                        listeners to each child, the parent listens for events and uses the event’s target property to
+                        handle specific child elements.</p>
                 </div>
             </div>
-            <div class="collapse collapse-arrow bg-base-200">
+            <div class="collapse collapse-arrow bg-base-200 border border-gray-300 shadow-lg">
                 <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                <div class="collapse-title text-base lg:text-xl font-medium">How do you manipulate an element's
+                    attributes and styles using the DOM?</div>
                 <div class="collapse-content">
-                    <p>hello</p>
+                    <p>1.setAttribute(name, value): Sets or updates an attribute. <br>
+                        2.getAttribute(name): Retrieves the value of an attribute. <br>
+                        3.removeAttribute(name): Removes an attribute.</p>
                 </div>
             </div>
         </div>
