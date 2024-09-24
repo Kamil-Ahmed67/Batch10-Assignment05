@@ -103,8 +103,8 @@ cardTwoDonationBtn.addEventListener('click', function () {
 
         // Add donation to history (fix the object structure)
         donationsList.push({
-            amount: donationTwo, // Use the same key as Card-1
-            title: cardTwoTitleElement.innerText, // Use the same key as Card-1
+            amount: donationTwo,
+            title: cardTwoTitleElement.innerText,
             date: new Date().toLocaleString()
         });
 
@@ -154,11 +154,9 @@ cardThreeDonationBtn.addEventListener('click', function () {
         const currentTotalDonation = parseFloat(totalDonationThirdElement.innerText);
         const newTotalDonation = addDonations(currentTotalDonation, donationThree);
         totalDonationThirdElement.innerText = newTotalDonation.toFixed(2);
-
-        // Add donation to history (fix the object structure)
         donationsList.push({
-            amount: donationThree, // Use the same key as Card-1
-            title: cardThreeTitleElement.innerText, // Use the same key as Card-1
+            amount: donationThree, 
+            title: cardThreeTitleElement.innerText, 
             date: new Date().toLocaleString()
         });
 

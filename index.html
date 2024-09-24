@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <style>
-        .lexend {
+        .lex-font {
             font-family: "Lexend", sans-serif;
             font-optical-sizing: auto;
         }
@@ -21,26 +21,28 @@
 
 </head>
 
-<body class="lexend">
-    <header class="mx-auto sticky top-0 z-50">
-        <div class="navbar bg-[#F9F7F3] p-4 mb-16 p-y-2 ">
+<body class="lex-font">
+    <header class="mx-auto bg-gray-100  sticky top-0 z-50 mb-24">
+        <div class="navbar p-4 p-y-2">
             <div class="navbar-start">
                 <button class="btn bg-lime-400">Blog</button>
             </div>
             <div class="navbar-center">
-                <a class="btn btn-ghost text-l lg:text-xl  font-semibold lg:font-bold"><img src="./assets/logo.png"
-                        alt="">Donate
-                    Bangladesh</a>
+                <a class="btn btn-ghost text-l lg:text-xl font-semibold lg:font-bold">
+                    <img src="./assets/logo.png" alt="">Donate Bangladesh
+                </a>
             </div>
             <div class="navbar-end">
                 <div class="flex items-center">
                     <img src="./assets/coin.png" alt=" " class="w-6 h-6 mr-2">
-                    <p class="text-sm lg:text-xl  font-semibold"><span id="total-balance">5500</span> BDT</p>
+                    <p class="text-sm lg:text-xl font-semibold">
+                        <span id="total-balance">5500</span> BDT
+                    </p>
                 </div>
-
             </div>
         </div>
     </header>
+    
     <main class="mx-auto">
         <!-- Donation and History Button -->
         <div class="flex justify-center items-center space-x-2 mb-8 ">
@@ -226,6 +228,7 @@
     </footer>
     <script src="./js/function.js"></script>
     <script src="./js/index.js"></script>
+   <script src="./js/window.js"></script>
 </body>
 
 </html>
