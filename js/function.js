@@ -26,7 +26,7 @@ function addDonationsIntoHistory() {
         listItem.className ="mx-auto max-w-5xl rounded-lg shadow-md p-4 border border-gray-200";
         listItem.innerHTML = `
         <div>
-            <span class="text-xl font-semibold">${donation.amount} Taka ${donation.title}</span><br>
+            <span class="text-xl font-semibold">${donation.amount} Taka Donated ${donation.title}</span><br>
             <span>${donation.date}(Bangladesh)</span>
         
         </div> `;
